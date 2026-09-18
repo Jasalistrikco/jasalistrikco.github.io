@@ -1,951 +1,1523 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>JasaListrik.co | Electrical Engineering & Contractor</title>
-  <meta name="description" content="JasaListrik.co menyediakan jasa pembuatan panel listrik, instalasi listrik, engineering, testing & commissioning, maintenance, dan troubleshooting untuk pabrik, gudang, rumah, workshop, dan kontraktor.">
-
-  <style>
-    :root{
-      --navy:#09233d;
-      --navy-2:#0f3557;
-      --orange:#ff6b1a;
-      --light:#f5f7fa;
-      --text:#17324d;
-      --muted:#64748b;
-      --white:#ffffff;
-      --line:#e2e8f0;
-      --shadow:0 18px 45px rgba(9,35,61,.12);
-    }
-
-    *{box-sizing:border-box;margin:0;padding:0}
-
-    html{scroll-behavior:smooth}
-
-    body{
-      font-family:Arial,Helvetica,sans-serif;
-      color:var(--text);
-      background:var(--white);
-      line-height:1.6;
-    }
-
-    a{text-decoration:none;color:inherit}
-
-    img{max-width:100%;display:block}
-
-    .container{
-      width:min(1120px,92%);
-      margin:auto;
-    }
-
-    /* HEADER */
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,.97);
-      border-bottom:1px solid var(--line);
-      backdrop-filter:blur(10px);
-    }
-
-    .nav{
-      min-height:78px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:30px;
-    }
-
-    .brand{
-      font-size:25px;
-      font-weight:800;
-      letter-spacing:-.7px;
-      color:var(--navy);
-      white-space:nowrap;
-    }
-
-    .brand span{color:var(--orange)}
-
-    .tagline{
-      display:block;
-      margin-top:-2px;
-      font-size:11px;
-      color:var(--muted);
-      letter-spacing:.2px;
-      font-weight:500;
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:28px;
-      font-size:15px;
-      font-weight:700;
-    }
-
-    .nav-links a:hover{color:var(--orange)}
-
-    .nav-cta{
-      background:var(--orange);
-      color:white;
-      padding:13px 20px;
-      border-radius:9px;
-      font-weight:800;
-    }
-
-    .menu-btn{
-      display:none;
-      border:0;
-      background:none;
-      font-size:28px;
-      color:var(--navy);
-      cursor:pointer;
-    }
-
-    /* HERO */
-    .hero{
-      background:linear-gradient(135deg,var(--navy),#123e63);
-      color:white;
-      padding:82px 0 78px;
-      overflow:hidden;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      align-items:center;
-      gap:65px;
-    }
-
-    .eyebrow{
-      color:#ff8a4a;
-      font-size:14px;
-      font-weight:800;
-      letter-spacing:2px;
-      margin-bottom:15px;
-    }
-
-    h1{
-      font-size:clamp(43px,6vw,72px);
-      line-height:1.02;
-      letter-spacing:-2.5px;
-      margin-bottom:25px;
-    }
-
-    h1 span{color:var(--orange)}
-
-    .hero-text{
-      max-width:690px;
-      font-size:18px;
-      color:#dbe8f4;
-      margin-bottom:30px;
-    }
-
-    .buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:13px;
-      margin-bottom:35px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:14px 22px;
-      border-radius:9px;
-      font-weight:800;
-      border:1px solid transparent;
-    }
-
-    .btn-primary{
-      background:var(--orange);
-      color:white;
-    }
-
-
-    .btn-secondary-dark{
-      background:var(--navy);
-      color:var(--white);
-      border:1px solid var(--navy);
-    }
-    .btn-secondary-dark:hover{
-      background:var(--navy-2);
-    }
-
-    .btn-secondary{
-      border-color:#b9c9d8;
-      color:white;
-    }
-
-    .hero-features{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px 22px;
-      color:#dbe8f4;
-      font-size:14px;
-    }
-
-    .hero-features div::before{
-      content:"✓";
-      color:#ff8a4a;
-      font-weight:900;
-      margin-right:7px;
-    }
-
-    .hero-photo{
-      background:#0b2c49;
-      border:1px solid rgba(255,255,255,.16);
-      padding:10px;
-      border-radius:20px;
-      box-shadow:0 25px 65px rgba(0,0,0,.25);
-    }
-
-    .hero-photo img{
-      width:100%;
-      height:520px;
-      object-fit:cover;
-      border-radius:13px;
-    }
-
-    /* GENERAL */
-    section{padding:88px 0}
-
-    .section-head{
-      max-width:720px;
-      margin-bottom:45px;
-    }
-
-    .section-label{
-      color:var(--orange);
-      font-weight:800;
-      letter-spacing:1.7px;
-      font-size:13px;
-      text-transform:uppercase;
-      margin-bottom:9px;
-    }
-
-    .section-title{
-      color:var(--navy);
-      font-size:clamp(31px,4vw,46px);
-      line-height:1.12;
-      letter-spacing:-1.2px;
-      margin-bottom:14px;
-    }
-
-    .section-text{
-      color:var(--muted);
-      font-size:17px;
-    }
-
-    /* ABOUT */
-    .about{
-      background:var(--light);
-    }
-
-    .about-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:60px;
-      align-items:start;
-    }
-
-    .about-card{
-      background:white;
-      padding:32px;
-      border-radius:16px;
-      box-shadow:var(--shadow);
-      border:1px solid var(--line);
-    }
-
-    .about-card h3{
-      color:var(--navy);
-      margin-bottom:13px;
-      font-size:22px;
-    }
-
-    .about-card p{color:var(--muted)}
-
-    .values{
-      display:grid;
-      gap:15px;
-    }
-
-    .value{
-      display:flex;
-      gap:16px;
-      padding:18px;
-      background:white;
-      border:1px solid var(--line);
-      border-radius:12px;
-    }
-
-    .value-icon{
-      width:42px;
-      height:42px;
-      flex:0 0 42px;
-      display:grid;
-      place-items:center;
-      background:#fff1e9;
-      color:var(--orange);
-      border-radius:10px;
-      font-size:20px;
-      font-weight:900;
-    }
-
-    .value h4{color:var(--navy);margin-bottom:3px}
-    .value p{font-size:14px;color:var(--muted)}
-
-    /* SERVICES */
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-    }
-
-    .card{
-      padding:28px;
-      border:1px solid var(--line);
-      border-radius:16px;
-      background:white;
-      box-shadow:0 10px 28px rgba(9,35,61,.06);
-      transition:.2s ease;
-    }
-
-    .card:hover{
-      transform:translateY(-4px);
-      box-shadow:var(--shadow);
-    }
-
-    .icon{
-      width:52px;
-      height:52px;
-      display:grid;
-      place-items:center;
-      border-radius:12px;
-      background:#fff1e9;
-      color:var(--orange);
-      font-size:23px;
-      margin-bottom:19px;
-    }
-
-    .card h3{
-      color:var(--navy);
-      font-size:20px;
-      margin-bottom:8px;
-    }
-
-    .card p{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    /* PRODUCTS */
-    .products{
-      background:var(--light);
-    }
-
-    .product-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:16px;
-    }
-
-    .product{
-      background:white;
-      border:1px solid var(--line);
-      border-radius:13px;
-      padding:22px;
-    }
-
-    .product strong{
-      display:block;
-      color:var(--navy);
-      font-size:17px;
-      margin-bottom:4px;
-    }
-
-    .product span{
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    /* PROCESS */
-    .process{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:12px;
-    }
-
-    .step{
-      position:relative;
-      padding:25px 18px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      text-align:center;
-      background:white;
-    }
-
-    .number{
-      width:38px;
-      height:38px;
-      display:grid;
-      place-items:center;
-      margin:0 auto 13px;
-      border-radius:50%;
-      background:var(--navy);
-      color:white;
-      font-weight:800;
-    }
-
-    .step h4{color:var(--navy);margin-bottom:4px}
-    .step p{color:var(--muted);font-size:13px}
-
-    /* PROJECT / CAPABILITY */
-    .project-box{
-      display:grid;
-      grid-template-columns:.9fr 1.1fr;
-      background:var(--navy);
-      color:white;
-      border-radius:20px;
-      overflow:hidden;
-    }
-
-    .project-copy{
-      padding:48px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-
-    .project-copy h2{
-      font-size:37px;
-      line-height:1.1;
-      margin-bottom:15px;
-    }
-
-    .project-copy p{color:#dbe8f4;margin-bottom:22px}
-
-    .project-photo img{
-      width:100%;
-      height:100%;
-      min-height:430px;
-      object-fit:cover;
-    }
-
-    .notice{
-      display:inline-block;
-      margin-top:12px;
-      padding:8px 11px;
-      border:1px solid rgba(255,255,255,.2);
-      border-radius:7px;
-      color:#cbd8e5;
-      font-size:12px;
-    }
-
-    /* CONTACT */
-    .contact{
-      background:var(--light);
-    }
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:25px;
-    }
-
-    .contact-card{
-      background:white;
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:32px;
-    }
-
-    .contact-card h3{
-      color:var(--navy);
-      margin-bottom:10px;
-      font-size:23px;
-    }
-
-    .contact-card p{color:var(--muted);margin-bottom:20px}
-
-    .contact-item{
-      padding:14px 0;
-      border-bottom:1px solid var(--line);
-    }
-
-    .contact-item:last-child{border-bottom:0}
-
-    .contact-item strong{
-      display:block;
-      color:var(--navy);
-      margin-bottom:2px;
-    }
-
-    .contact-item span{color:var(--muted);font-size:14px}
-
-    /* FOOTER */
-    footer{
-      background:#061a2d;
-      color:#cbd8e5;
-      padding:28px 0;
-    }
-
-    .footer{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .footer-brand{
-      color:white;
-      font-weight:800;
-      font-size:19px;
-    }
-
-    .footer-brand span{color:var(--orange)}
-
-    .footer small{color:#8fa5b8}
-
-    /* MOBILE */
-    @media(max-width:900px){
-      .nav-links{
-        display:none;
-        position:absolute;
-        left:0;
-        right:0;
-        top:78px;
-        background:white;
-        padding:20px 4%;
-        flex-direction:column;
-        align-items:flex-start;
-        border-bottom:1px solid var(--line);
-        box-shadow:0 12px 30px rgba(0,0,0,.08);
-      }
-
-      .nav-links.active{display:flex}
-      .menu-btn{display:block}
-      .nav-cta{display:none}
-
-      .hero-grid,
-      .about-grid,
-      .project-box,
-      .contact-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-photo{max-width:650px;margin:auto}
-      .hero-photo img{height:430px}
-
-      .cards{grid-template-columns:repeat(2,1fr)}
-      .product-grid{grid-template-columns:repeat(2,1fr)}
-      .process{grid-template-columns:repeat(2,1fr)}
-
-      .project-photo{order:-1}
-      .project-photo img{min-height:350px}
-    }
-
-    @media(max-width:600px){
-      section{padding:65px 0}
-
-      .brand{font-size:21px}
-      .tagline{font-size:9px}
-
-      .hero{
-        padding:60px 0;
-      }
-
-      h1{letter-spacing:-1.5px}
-      .hero-text{font-size:16px}
-      .hero-photo img{height:350px}
-
-      .cards,
-      .product-grid,
-      .process{
-        grid-template-columns:1fr;
-      }
-
-      .about-card,
-      .project-copy,
-      .contact-card{
-        padding:25px;
-      }
-
-      .footer{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JasaListrik.co | Electrical Engineering & Contractor</title>
+
+    <meta name="description" content="JasaListrik.co menyediakan solusi kelistrikan meliputi pembuatan panel, instalasi listrik, engineering, testing, commissioning, maintenance, dan troubleshooting. Melayani Jawa, Bali, Kalimantan, Lombok, dan Sumatera.">
+
+    <style>
+        :root {
+            --navy: #09233d;
+            --navy-dark: #061a2d;
+            --navy-light: #123b5d;
+            --orange: #ff6b1a;
+            --orange-dark: #e9570b;
+            --white: #ffffff;
+            --light: #f5f7fa;
+            --light-blue: #eef4f8;
+            --text: #17324d;
+            --muted: #64748b;
+            --line: #dfe7ee;
+            --shadow: 0 18px 45px rgba(9, 35, 61, 0.12);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.97);
+            border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--navy);
+        }
+
+        .brand-name span {
+            color: var(--orange);
+        }
+
+        .brand-tagline {
+            margin-top: 5px;
+            font-size: 10px;
+            letter-spacing: 1.4px;
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text);
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .nav-cta {
+            padding: 11px 18px;
+            background: var(--orange);
+            color: var(--white) !important;
+            border-radius: 8px;
+        }
+
+        .nav-cta:hover {
+            background: var(--orange-dark);
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: var(--navy);
+            color: var(--white);
+            padding: 9px 12px;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(135deg, var(--navy-dark), var(--navy));
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            min-height: 650px;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 60px;
+            padding: 70px 0;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 7px 12px;
+            border-left: 3px solid var(--orange);
+            background: rgba(255, 255, 255, 0.08);
+            color: #dbe8f2;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+        }
+
+        .hero h1 {
+            max-width: 720px;
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1.02;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--orange);
+        }
+
+        .hero-text {
+            max-width: 650px;
+            color: #c7d5e1;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 13px;
+            transition: 0.25s;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.35);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .hero-image-wrap {
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+        }
+
+        .hero-badge {
+            position: absolute;
+            left: -20px;
+            bottom: 25px;
+            background: var(--white);
+            color: var(--navy);
+            padding: 17px 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-badge strong {
+            display: block;
+            font-size: 15px;
+        }
+
+        .hero-badge small {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        /* =========================
+           GENERAL SECTION
+        ========================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-head {
+            max-width: 720px;
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            color: var(--orange);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 1.8px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: var(--navy);
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .section-text {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content p {
+            color: var(--muted);
+            margin-bottom: 18px;
+            line-height: 1.85;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .about-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 13px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .about-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--orange);
+            font-weight: 900;
+        }
+
+        .about-card {
+            background: var(--light);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-card h3 {
+            color: var(--navy);
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .stat {
+            background: var(--white);
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--orange);
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: var(--light);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 28px;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: rgba(255,107,26,0.35);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,107,26,0.1);
+            color: var(--orange);
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--navy);
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            min-height: 320px;
+            background: var(--light);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 22px;
+            color: var(--white);
+            background: linear-gradient(transparent, rgba(6,26,45,0.9));
+        }
+
+        .gallery-caption strong {
+            display: block;
+            font-size: 17px;
+            margin-bottom: 3px;
+        }
+
+        .gallery-caption span {
+            font-size: 12px;
+            color: #dbe8f2;
+        }
+
+        /* =========================
+           CAPABILITIES
+        ========================= */
+
+        .capabilities {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .capabilities .section-title {
+            color: var(--white);
+        }
+
+        .capabilities .section-text {
+            color: #c7d5e1;
+        }
+
+        .capability-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .capability-box {
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 16px;
+            padding: 30px;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .capability-box h3 {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .capability-list {
+            list-style: none;
+        }
+
+        .capability-list li {
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            color: #d6e2eb;
+            font-size: 14px;
+        }
+
+        .capability-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .capability-list li::before {
+            content: "→";
+            color: var(--orange);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            background: var(--light);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
+        }
+
+        .process-step {
+            position: relative;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 22px 15px;
+            text-align: center;
+        }
+
+        .process-number {
+            width: 38px;
+            height: 38px;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--orange);
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+        .process-step h3 {
+            color: var(--navy);
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+
+        .process-step p {
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            color: var(--white);
+            border-radius: 20px;
+            padding: 55px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-box h2 {
+            font-size: clamp(30px, 4vw, 45px);
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #c7d5e1;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 13px;
+        }
+
+        .contact-item {
+            padding: 16px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .contact-item small {
+            display: block;
+            color: #aebfce;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .contact-item strong {
+            font-size: 14px;
+        }
+
+        .contact-actions {
+            margin-top: 22px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 35px 0;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .footer-brand span {
+            color: var(--orange);
+        }
+
+        .footer small {
+            color: #8fa4b7;
+            font-size: 11px;
+        }
+
+        /* =========================
+           WHATSAPP FLOAT
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 999;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 900;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: 0.25s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 980px) {
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .hero-grid,
+            .about-grid,
+            .capability-grid,
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                height: 420px;
+            }
+
+            .hero-badge {
+                left: 15px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 760px) {
+
+            .nav {
+                min-height: 68px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--line);
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 14px 4%;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .nav-cta {
+                border-radius: 0 !important;
+                text-align: center;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero-grid {
+                min-height: auto;
+                padding: 65px 0;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+                letter-spacing: -1.5px;
+            }
+
+            .hero-text {
+                font-size: 15px;
+            }
+
+            .hero-image {
+                height: 330px;
+            }
+
+            .cards,
+            .gallery-grid,
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-box {
+                padding: 35px 25px;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .brand-name {
+                font-size: 21px;
+            }
+
+            .brand-tagline {
+                font-size: 8px;
+            }
+
+            .hero h1 {
+                font-size: 37px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-buttons {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="container nav">
-      <a href="#home">
-        <div class="brand">JasaListrik<span>.co</span></div>
-        <div class="tagline">Electrical Solutions. Built for Reliability.</div>
-      </a>
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#products">Products</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#customers">Customers</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <header>
+        <div class="container nav">
 
-      <a class="nav-cta" href="#contact">Request Quotation</a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-    </div>
-  </header>
+            <a href="#home" class="brand">
+                <div class="brand-name">
+                    JasaListrik<span>.co</span>
+                </div>
+                <div class="brand-tagline">
+                    ELECTRICAL SOLUTIONS. BUILT FOR RELIABILITY.
+                </div>
+            </a>
 
-  <main>
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                ☰
+            </button>
 
-    <!-- HERO -->
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#capabilities">Capabilities</a>
+                <a href="#process">Process</a>
+                <a href="#contact" class="nav-cta">Request Quotation</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <section class="hero" id="home">
-      <div class="container hero-grid">
 
-        <div>
-          <div class="eyebrow">ELECTRICAL ENGINEERING & CONTRACTOR</div>
+        <div class="container hero-grid">
 
-          <h1>
-            WE BUILD THE<br>
-            <span>POWER</span> BEHIND<br>
-            YOUR BUSINESS.
-          </h1>
+            <div class="hero-content">
 
-          <p class="hero-text">
-            Panel manufacturing, electrical installation, engineering, testing,
-            commissioning, maintenance, and troubleshooting for industrial,
-            commercial, residential, and workshop applications.
-          </p>
+                <div class="eyebrow">
+                    ELECTRICAL ENGINEERING & CONTRACTOR
+                </div>
 
-          <div class="buttons">
-            <a class="btn btn-primary" href="#contact">Request Quotation</a>
-            <a class="btn btn-secondary" href="#services">Explore Services</a>
-          </div>
+                <h1>
+                    WE BUILD THE
+                    <span>POWER</span>
+                    BEHIND YOUR BUSINESS.
+                </h1>
 
-          <div class="hero-features">
-            <div>Custom Panel</div>
-            <div>Electrical Installation</div>
-            <div>Engineering & Testing</div>
-          </div>
+                <p class="hero-text">
+                    Panel manufacturing, electrical installation, engineering,
+                    testing, commissioning, maintenance, and troubleshooting
+                    for industrial, commercial, residential, and workshop applications.
+                </p>
+
+                <div class="hero-buttons">
+                    <a
+                        href="https://wa.me/6285649690708?text=Halo%20JasaListrik.co,%20saya%20ingin%20meminta%20penawaran%20jasa%20kelistrikan."
+                        class="btn btn-primary"
+                        target="_blank"
+                    >
+                        Request Quotation
+                    </a>
+
+                    <a href="#services" class="btn btn-outline">
+                        Explore Services
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-image-wrap">
+
+                <img
+                    src="hero.png"
+                    alt="Electrical control panel"
+                    class="hero-image"
+                >
+
+                <div class="hero-badge">
+                    <strong>Electrical Solutions</strong>
+                    <small>Engineering • Installation • Maintenance</small>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="hero-photo">
-          <img src="hero.png" alt="Electrical control panel by JasaListrik.co">
-        </div>
-
-      </div>
     </section>
 
-    <!-- ABOUT -->
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
     <section class="about" id="about">
-      <div class="container about-grid">
 
-        <div>
-          <div class="section-label">ABOUT JASALISTRIK.CO</div>
-          <h2 class="section-title">Electrical solutions for your project.</h2>
-          <p class="section-text">
-            JasaListrik.co focuses on practical electrical solutions,
-            from panel fabrication and installation to testing and
-            maintenance support.
-          </p>
-          <br>
-          <p class="section-text">
-            Our approach is based on clear communication, proper workmanship,
-            safety awareness, and solutions tailored to each project requirement.
-          </p>
-        </div>
+        <div class="container">
 
-        <div class="values">
-          <div class="value">
-            <div class="value-icon">✓</div>
-            <div>
-              <h4>Quality Focus</h4>
-              <p>Attention to workmanship, wiring, labeling, and panel finishing.</p>
+            <div class="about-grid">
+
+                <div class="about-content">
+
+                    <div class="section-label">
+                        ABOUT JASALISTRIK.CO
+                    </div>
+
+                    <h2 class="section-title">
+                        Practical electrical solutions for real-world applications.
+                    </h2>
+
+                    <p>
+                        JasaListrik.co provides electrical engineering and contractor
+                        services designed to support project requirements from
+                        planning and installation through testing, maintenance,
+                        and troubleshooting.
+                    </p>
+
+                    <p>
+                        We focus on practical execution, proper installation,
+                        technical coordination, and solutions that can be adapted
+                        to site conditions and customer requirements.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>Electrical panel manufacturing and assembly</li>
+                        <li>Electrical installation and wiring</li>
+                        <li>Engineering and technical support</li>
+                        <li>Testing, commissioning, and troubleshooting</li>
+                        <li>Maintenance and electrical improvement</li>
+                    </ul>
+
+                </div>
+
+                <div class="about-card">
+
+                    <h3>Service Coverage</h3>
+
+                    <div class="stats">
+
+                        <div class="stat">
+                            <strong>Java</strong>
+                            <span>Project Coverage</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>Bali</strong>
+                            <span>Project Coverage</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>Kalimantan</strong>
+                            <span>Project Coverage</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>Lombok</strong>
+                            <span>Project Coverage</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>Sumatera</strong>
+                            <span>Project Coverage</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>6+</strong>
+                            <span>Core Services</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-          </div>
 
-          <div class="value">
-            <div class="value-icon">⚡</div>
-            <div>
-              <h4>Reliable Solutions</h4>
-              <p>Solutions designed around the actual application and project needs.</p>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <div class="section-label">
+                    OUR SERVICES
+                </div>
+
+                <h2 class="section-title">
+                    Electrical services from panel to installation.
+                </h2>
+
+                <p class="section-text">
+                    Services can be tailored to project scope, technical specifications,
+                    site conditions, and customer requirements.
+                </p>
+
             </div>
-          </div>
 
-          <div class="value">
-            <div class="value-icon">◆</div>
-            <div>
-              <h4>Safety Awareness</h4>
-              <p>Safety considerations are integrated into installation and testing activities.</p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-icon">▣</div>
+                    <h3>Electrical Panel</h3>
+                    <p>
+                        Panel assembly, wiring, component installation,
+                        control panel solutions, and electrical panel modification.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Electrical Installation</h3>
+                    <p>
+                        Electrical installation, cable routing, wiring,
+                        cable tray installation, and electrical equipment connection.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⌁</div>
+                    <h3>Engineering</h3>
+                    <p>
+                        Electrical engineering support, technical planning,
+                        system review, drawing coordination, and project solutions.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">✓</div>
+                    <h3>Testing & Commissioning</h3>
+                    <p>
+                        Electrical testing, inspection, commissioning support,
+                        functional verification, and troubleshooting during startup.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚙</div>
+                    <h3>Maintenance</h3>
+                    <p>
+                        Preventive and corrective maintenance for electrical systems,
+                        panels, wiring, and supporting equipment.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">+</div>
+                    <h3>Troubleshooting</h3>
+                    <p>
+                        Identification and correction of electrical problems,
+                        equipment issues, wiring faults, and operational disturbances.
+                    </p>
+                </div>
+
             </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services">
-      <div class="container">
-
-        <div class="section-head">
-          <div class="section-label">OUR SERVICES</div>
-          <h2 class="section-title">Electrical services from panel to installation.</h2>
-          <p class="section-text">
-            Services can be tailored to project scope, technical specifications,
-            site conditions, and customer requirements across Java, Bali,
-            Kalimantan, Lombok, and Sumatra.
-          </p>
-        </div>
-
-        <div class="cards">
-
-          <div class="card">
-            <div class="icon">▣</div>
-            <h3>Panel Manufacturing</h3>
-            <p>Custom electrical control and distribution panels according to project requirements and approved specifications.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon">⚡</div>
-            <h3>Electrical Installation</h3>
-            <p>Panel installation, cable routing, termination, equipment connection, and electrical installation support.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon">⌘</div>
-            <h3>Engineering & Design</h3>
-            <p>Electrical schematic, panel layout, component selection support, and technical documentation.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon">✓</div>
-            <h3>Testing & Commissioning</h3>
-            <p>Electrical inspection and functional testing support before system handover and operation.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon">⚙</div>
-            <h3>Maintenance</h3>
-            <p>Preventive and corrective maintenance support for electrical panels and related equipment.</p>
-          </div>
-
-          <div class="card">
-            <div class="icon">⌕</div>
-            <h3>Troubleshooting</h3>
-            <p>Assistance in identifying electrical faults and restoring equipment or system operation.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section class="products" id="products">
-      <div class="container">
-
-        <div class="section-head">
-          <div class="section-label">PRODUCTS</div>
-          <h2 class="section-title">Panel solutions for different applications.</h2>
-          <p class="section-text">
-            Panel configuration, enclosure, components, and specifications
-            can be discussed according to the project requirement.
-          </p>
-        </div>
-
-        <div class="product-grid">
-          <div class="product"><strong>LVMDP</strong><span>Low Voltage Main Distribution Panel</span></div>
-          <div class="product"><strong>MCC Panel</strong><span>Motor Control Center</span></div>
-          <div class="product"><strong>PCC Panel</strong><span>Power Control Center</span></div>
-          <div class="product"><strong>Control Panel</strong><span>Industrial control applications</span></div>
-          <div class="product"><strong>PLC Panel</strong><span>PLC-based automation control</span></div>
-          <div class="product"><strong>VFD Panel</strong><span>Motor speed control applications</span></div>
-          <div class="product"><strong>ATS / AMF</strong><span>Automatic transfer and generator control</span></div>
-          <div class="product"><strong>APFC Panel</strong><span>Power factor correction</span></div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section>
-      <div class="container">
-
-        <div class="section-head">
-          <div class="section-label">OUR WORK PROCESS</div>
-          <h2 class="section-title">From requirement to ready-to-operate solution.</h2>
-        </div>
-
-        <div class="process">
-          <div class="step">
-            <div class="number">1</div>
-            <h4>Consultation</h4>
-            <p>Understand application and requirements.</p>
-          </div>
-
-          <div class="step">
-            <div class="number">2</div>
-            <h4>Engineering</h4>
-            <p>Develop design and technical solution.</p>
-          </div>
-
-          <div class="step">
-            <div class="number">3</div>
-            <h4>Manufacturing</h4>
-            <p>Panel fabrication, assembly, and wiring.</p>
-          </div>
-
-          <div class="step">
-            <div class="number">4</div>
-            <h4>Installation</h4>
-            <p>Installation and cable termination at site.</p>
-          </div>
-
-          <div class="step">
-            <div class="number">5</div>
-            <h4>Testing</h4>
-            <p>Inspection, testing, and commissioning support.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CAPABILITIES -->
-    <section id="capabilities">
-      <div class="container">
-
-        <div class="project-box">
-
-          <div class="project-copy">
-            <div class="section-label">SAMPLE SOLUTION</div>
-            <h2>Control panel & electrical installation.</h2>
-            <p>
-              Representative visual of a medium-size control panel,
-              panel wiring, and electrical installation work.
-            </p>
-            <a class="btn btn-primary" href="#contact">Discuss Your Project</a>
-            <span class="notice">Representative visual for capability presentation. Completed project portfolio will be added as projects are completed.</span>
-          </div>
-
-          <div class="project-photo">
-            <img src="hero.png" alt="Medium-size electrical control panel">
-          </div>
 
         </div>
 
-      </div>
     </section>
 
 
-    <!-- TARGET CUSTOMERS -->
-    <section class="products" id="customers">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-label">WHO WE SERVE</div>
-          <h2 class="section-title">Electrical support for different types of customers.</h2>
-          <p class="section-text">
-            We provide electrical solutions for factories, warehouses, homes,
-            workshops, and contractors, with scope adjusted to the actual site requirements.
-          </p>
+    <!-- =========================
+         PROJECT / REPRESENTATIVE WORK
+    ========================== -->
+
+    <section class="gallery" id="projects">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <div class="section-label">
+                    ELECTRICAL SOLUTIONS
+                </div>
+
+                <h2 class="section-title">
+                    Representative electrical work.
+                </h2>
+
+                <p class="section-text">
+                    Examples of electrical panel assembly, installation,
+                    testing, maintenance, and project execution.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+
+                    <img
+                        src="project-installation-collage.png"
+                        alt="Control panel installation and electrical project work"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-caption">
+                        <strong>Control Panel Installation</strong>
+                        <span>Installation & Electrical Project Execution</span>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="panel-testing-maintenance.png"
+                        alt="Electrical panel testing and maintenance"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-caption">
+                        <strong>Panel Testing & Maintenance</strong>
+                        <span>Inspection, Testing & Technical Maintenance</span>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="electrical-installation.png"
+                        alt="Electrical installation work"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-caption">
+                        <strong>Electrical Installation</strong>
+                        <span>Installation, Wiring & Cable Management</span>
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="panel-assembly.png"
+                        alt="Electrical panel assembly and wiring"
+                        loading="lazy"
+                    >
+
+                    <div class="gallery-caption">
+                        <strong>Panel Assembly</strong>
+                        <span>Panel Assembly, Wiring & Component Installation</span>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="product-grid">
-          <div class="product"><strong>Factory</strong><span>Production and industrial electrical applications</span></div>
-          <div class="product"><strong>Warehouse</strong><span>Distribution, lighting, and electrical infrastructure</span></div>
-          <div class="product"><strong>Residential</strong><span>Electrical installation and panel solutions for homes</span></div>
-          <div class="product"><strong>Workshop</strong><span>Power distribution and equipment connections</span></div>
-          <div class="product"><strong>Contractor</strong><span>Panel supply, installation, and project support</span></div>
-        </div>
-      </div>
     </section>
 
-    <!-- CONTACT -->
+
+    <!-- =========================
+         CAPABILITIES
+    ========================== -->
+
+    <section class="capabilities" id="capabilities">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <div class="section-label">
+                    CAPABILITIES
+                </div>
+
+                <h2 class="section-title">
+                    Supporting different electrical applications.
+                </h2>
+
+                <p class="section-text">
+                    Our services can support various project environments,
+                    from industrial facilities to residential and workshop applications.
+                </p>
+
+            </div>
+
+
+            <div class="capability-grid">
+
+                <div class="capability-box">
+
+                    <h3>Customer Segments</h3>
+
+                    <ul class="capability-list">
+                        <li>Factory & Manufacturing</li>
+                        <li>Warehouse & Logistics</li>
+                        <li>Residential</li>
+                        <li>Workshop</li>
+                        <li>Electrical & Mechanical Contractors</li>
+                        <li>Commercial Facilities</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="capability-box">
+
+                    <h3>Technical Scope</h3>
+
+                    <ul class="capability-list">
+                        <li>Electrical Control Panel</li>
+                        <li>Power & Control Wiring</li>
+                        <li>Cable Tray & Cable Installation</li>
+                        <li>Electrical Equipment Installation</li>
+                        <li>Testing & Commissioning</li>
+                        <li>Maintenance & Troubleshooting</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WORK PROCESS
+    ========================== -->
+
+    <section class="process" id="process">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <div class="section-label">
+                    WORK PROCESS
+                </div>
+
+                <h2 class="section-title">
+                    From requirement to reliable operation.
+                </h2>
+
+                <p class="section-text">
+                    A structured workflow helps ensure that project requirements,
+                    technical execution, and final verification remain aligned.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <h3>Survey</h3>
+                    <p>Understand site conditions and requirements.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <h3>Engineering</h3>
+                    <p>Define technical solutions and project scope.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <h3>Fabrication</h3>
+                    <p>Panel assembly and electrical preparation.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <h3>Installation</h3>
+                    <p>Execute installation and system connection.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">05</div>
+                    <h3>Testing</h3>
+                    <p>Verify system functionality and installation.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">06</div>
+                    <h3>Support</h3>
+                    <p>Maintenance and troubleshooting support.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
     <section class="contact" id="contact">
-      <div class="container">
 
-        <div class="section-head">
-          <div class="section-label">CONTACT</div>
-          <h2 class="section-title">Tell us what electrical solution you need.</h2>
-          <p class="section-text">
-            Contact us to discuss panel manufacturing, electrical installation,
-            engineering, testing, maintenance, or troubleshooting requirements.
-          </p>
+        <div class="container">
+
+            <div class="contact-box">
+
+                <div>
+
+                    <div class="section-label">
+                        CONTACT US
+                    </div>
+
+                    <h2>
+                        Let's discuss your electrical project.
+                    </h2>
+
+                    <p>
+                        Tell us about your project requirements, location,
+                        electrical scope, and expected timeline.
+                        Our team can discuss the appropriate solution
+                        based on your requirements.
+                    </p>
+
+                    <div class="contact-actions">
+
+                        <a
+                            href="https://wa.me/6285649690708?text=Halo%20JasaListrik.co,%20saya%20ingin%20berdiskusi%20mengenai%20project%20kelistrikan."
+                            class="btn btn-primary"
+                            target="_blank"
+                        >
+                            Chat on WhatsApp
+                        </a>
+
+                        <a
+                            href="mailto:muhammadsauqi97@gmail.com"
+                            class="btn btn-outline"
+                        >
+                            Send Email
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-details">
+
+                    <div class="contact-item">
+                        <small>WhatsApp / Phone</small>
+                        <strong>+62 856-4969-0708</strong>
+                    </div>
+
+                    <div class="contact-item">
+                        <small>Email</small>
+                        <strong>muhammadsauqi97@gmail.com</strong>
+                    </div>
+
+                    <div class="contact-item">
+                        <small>Base Location</small>
+                        <strong>Sidoarjo, East Java, Indonesia</strong>
+                    </div>
+
+                    <div class="contact-item">
+                        <small>Service Area</small>
+                        <strong>Java • Bali • Kalimantan • Lombok • Sumatera</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="contact-grid">
-
-          <div class="contact-card">
-            <h3>Request a Quotation</h3>
-            <p>
-              Prepare your project information, drawing, specification, quantity,
-              site location, or other relevant details for discussion.
-            </p>
-
-            <div class="buttons">
-              <a class="btn btn-primary" href="https://wa.me/6285649690708?text=Halo%20JasaListrik.co%2C%20saya%20ingin%20mendapatkan%20informasi%20dan%20penawaran%20untuk%20kebutuhan%20kelistrikan.">Chat via WhatsApp</a>
-              <a class="btn btn-secondary-dark" href="mailto:muhammadsauqi97@gmail.com">Email Us</a>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <h3>JasaListrik.co</h3>
-
-            <div class="contact-item">
-              <strong>Email</strong>
-              <span><a href="mailto:muhammadsauqi97@gmail.com">muhammadsauqi97@gmail.com</a></span>
-            </div>
-
-            <div class="contact-item">
-              <strong>WhatsApp</strong>
-              <span><a href="https://wa.me/6285649690708">+62 856-4969-0708</a></span>
-            </div>
-
-            <div class="contact-item">
-              <strong>Coverage</strong>
-              <span>Java, Bali, Kalimantan, Lombok & Sumatra</span>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
     </section>
 
-  </main>
 
-  <footer>
-    <div class="container footer">
-      <div class="footer-brand">JasaListrik<span>.co</span></div>
-      <small>Electrical Solutions. Built for Reliability.</small>
-      <small>© 2026 JasaListrik.co</small>
-    </div>
-  </footer>
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+    <footer>
 
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
+        <div class="container footer">
 
-    document.querySelectorAll("#navLinks a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-      });
-    });
-  </script>
+            <div>
+                <div class="footer-brand">
+                    JasaListrik<span>.co</span>
+                </div>
+
+                <small>
+                    Electrical Solutions. Built for Reliability.
+                </small>
+            </div>
+
+            <small>
+                © 2026 JasaListrik.co. All rights reserved.
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         WHATSAPP BUTTON
+    ========================== -->
+
+    <a
+        href="https://wa.me/6285649690708?text=Halo%20JasaListrik.co,%20saya%20ingin%20meminta%20informasi%20mengenai%20jasa%20kelistrikan."
+        class="whatsapp"
+        target="_blank"
+        aria-label="Chat via WhatsApp"
+        title="Chat via WhatsApp"
+    >
+        W
+    </a>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+
+        document.querySelectorAll("#navLinks a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+            });
+
+        });
+
+    </script>
 
 </body>
 </html>
