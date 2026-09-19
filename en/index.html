@@ -5,23 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Electrical Services & Electrical Panels | JasaListrik.co</title>
-
-<meta name="description" content="JasaListrik.co provides electrical panel manufacturing, residential and industrial electrical installation, engineering, testing, commissioning, maintenance, and troubleshooting services across Indonesia.">
-
+<meta name="description" content="JasaListrik.co provides electrical panel manufacturing, residential and industrial electrical installation, engineering, testing, commissioning, maintenance, and troubleshooting services across Java, Bali, Lombok, Kalimantan, and Sumatra.">
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://jasalistrikco.biz.id/en/">
-
 <link rel="alternate" hreflang="id" href="https://jasalistrikco.biz.id/">
 <link rel="alternate" hreflang="en" href="https://jasalistrikco.biz.id/en/">
 <link rel="alternate" hreflang="x-default" href="https://jasalistrikco.biz.id/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Electrical Services & Electrical Panels | JasaListrik.co">
-<meta property="og:description" content="Electrical panel manufacturing, residential and industrial electrical installation, engineering, testing, maintenance, and troubleshooting services.">
+<meta property="og:description" content="Electrical panel manufacturing, residential and industrial electrical installation, engineering, testing, maintenance, and troubleshooting.">
 <meta property="og:url" content="https://jasalistrikco.biz.id/en/">
 <meta property="og:site_name" content="JasaListrik.co">
-
+<meta property="og:image" content="https://jasalistrikco.biz.id/panel-hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Electrical Services & Electrical Panels | JasaListrik.co">
+<meta name="twitter:description" content="Electrical panel manufacturing, residential and industrial electrical installation, engineering, testing, maintenance, and troubleshooting.">
+<meta name="twitter:image" content="https://jasalistrikco.biz.id/panel-hero.png">
 <meta name="theme-color" content="#08233d">
 
 <script type="application/ld+json">
@@ -39,13 +40,7 @@
     "addressRegion": "East Java",
     "addressCountry": "ID"
   },
-  "areaServed": [
-    "Java",
-    "Bali",
-    "Kalimantan",
-    "Lombok",
-    "Sumatra"
-  ],
+  "areaServed": ["Java", "Bali", "Kalimantan", "Lombok", "Sumatra"],
   "knowsAbout": [
     "Electrical Panel Manufacturing",
     "Electrical Installation",
@@ -60,264 +55,333 @@
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+:root{
+    --navy:#08233d;
+    --navy-2:#0d3558;
+    --orange:#ff6b1a;
+    --orange-dark:#e9570b;
+    --white:#fff;
+    --light:#f4f7fa;
+    --text:#17324d;
+    --muted:#61758a;
+    --line:#dce5ed;
+    --shadow:0 18px 45px rgba(8,35,61,.12);
+    --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{width:min(1180px,92%);margin:auto}
+
+/* HEADER */
+header{
+    position:sticky;top:0;z-index:1000;
+    background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--line);
+    backdrop-filter:blur(10px);
+}
+.navbar{
+    min-height:82px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:30px;
+}
+.logo{font-size:27px;font-weight:800;letter-spacing:-1px;color:var(--navy)}
+.logo span{color:var(--orange)}
+.tagline{
+    display:block;margin-top:-3px;font-size:11px;
+    letter-spacing:1px;font-weight:700;color:#708399
+}
+.nav-links{
+    display:flex;align-items:center;gap:25px;
+    font-size:14px;font-weight:700
+}
+.nav-links a{transition:.25s}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{
+    background:var(--orange);color:#fff!important;
+    padding:13px 21px;border-radius:10px
+}
+.nav-cta:hover{background:var(--orange-dark)}
+.menu-btn{
+    display:none;border:0;background:none;
+    font-size:27px;cursor:pointer;color:var(--navy)
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #102a43;
-  background: #ffffff;
-  line-height: 1.6;
+/* HERO */
+.hero{
+    background:
+        radial-gradient(circle at 85% 15%,rgba(255,107,26,.12),transparent 30%),
+        linear-gradient(135deg,var(--navy),#061a2d);
+    color:#fff;padding:82px 0 76px;overflow:hidden
+}
+.hero-grid{
+    display:grid;grid-template-columns:1fr 1.05fr;
+    gap:58px;align-items:center
+}
+.eyebrow{
+    color:var(--orange);font-size:13px;font-weight:800;
+    letter-spacing:2px;margin-bottom:18px
+}
+.hero h1{
+    font-size:clamp(44px,6vw,74px);
+    line-height:1.02;letter-spacing:-2px;margin-bottom:24px
+}
+.hero h1 span{color:var(--orange);display:block}
+.hero-text{
+    font-size:18px;color:#dbe7f0;max-width:650px
+}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{
+    display:inline-block;padding:14px 22px;border-radius:9px;
+    font-weight:700;transition:.25s
+}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange-dark)}
+.btn-outline{border:1px solid rgba(255,255,255,.7);color:#fff}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+.hero-visual{position:relative}
+.hero-visual img{
+    width:100%;height:470px;object-fit:cover;
+    border-radius:20px;box-shadow:var(--shadow)
+}
+.hero-badge{
+    position:absolute;left:-24px;bottom:28px;
+    background:#fff;color:var(--navy);
+    padding:18px 20px;border-radius:14px;
+    box-shadow:var(--shadow);max-width:245px
+}
+.hero-badge strong{display:block;font-size:15px}
+.hero-badge span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+
+/* GENERAL */
+section{padding:86px 0}
+.section-label{
+    color:var(--orange);font-size:12px;font-weight:800;
+    letter-spacing:2px;margin-bottom:10px
+}
+.section-title{
+    font-size:clamp(32px,4vw,48px);
+    line-height:1.12;letter-spacing:-1px;margin-bottom:16px
+}
+.section-text{color:var(--muted);max-width:760px}
+.dark-section{background:var(--light)}
+
+/* ABOUT */
+.intro-grid{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:55px;align-items:center
+}
+.intro-copy h2{font-size:clamp(32px,4vw,48px);line-height:1.12;margin-bottom:20px}
+.intro-copy p{color:var(--muted);max-width:650px}
+.check-list{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:13px 20px;margin-top:28px
+}
+.check-item{display:flex;gap:10px;align-items:center;font-weight:700;font-size:14px}
+.check-icon{
+    width:25px;height:25px;border-radius:50%;
+    background:#fff0e8;color:var(--orange);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;flex:none
+}
+.intro-image{position:relative}
+.intro-image img{
+    width:100%;height:430px;object-fit:cover;
+    border-radius:18px;box-shadow:var(--shadow)
+}
+.image-note{
+    position:absolute;left:22px;bottom:20px;
+    background:#fff;padding:14px 16px;border-radius:12px;
+    box-shadow:var(--shadow)
+}
+.image-note strong{display:block}
+.image-note span{display:block;color:var(--muted);font-size:12px}
+
+/* SERVICES */
+.service-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px
+}
+.service-card{
+    background:#fff;border:1px solid var(--line);
+    border-radius:18px;padding:30px;
+    box-shadow:0 8px 25px rgba(8,35,61,.04)
+}
+.service-number{
+    color:var(--orange);font-size:12px;font-weight:800;
+    letter-spacing:1.5px;margin-bottom:13px
+}
+.service-card h3{font-size:24px;margin-bottom:12px}
+.service-card p{color:var(--muted);margin-bottom:18px}
+.service-list{list-style:none;display:grid;gap:8px}
+.service-list li{position:relative;padding-left:19px;color:#456078;font-size:14px}
+.service-list li::before{
+    content:"";position:absolute;left:0;top:.68em;
+    width:6px;height:6px;border-radius:50%;background:var(--orange)
+}
+.support-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:20px;margin-top:20px
+}
+.support-card{
+    background:#fff;border:1px solid var(--line);
+    border-radius:18px;padding:28px
+}
+.support-icon{
+    width:48px;height:48px;border-radius:12px;
+    background:#fff0e8;color:var(--orange);
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;margin-bottom:17px
+}
+.support-card h3{margin-bottom:10px}
+.support-card p{color:var(--muted);font-size:14px}
+
+/* SOLUTIONS BANNER */
+.solution-banner{
+    background:linear-gradient(135deg,var(--navy),var(--navy-2));
+    color:#fff;border-radius:22px;padding:58px;
+    display:grid;grid-template-columns:1.15fr .85fr;
+    gap:40px;align-items:center
+}
+.solution-banner .section-label{color:#ff9a5e}
+.solution-banner h2{font-size:clamp(30px,4vw,48px);line-height:1.12;margin-bottom:15px}
+.solution-banner p{color:#c9d7e3}
+.solution-points{display:grid;gap:13px}
+.solution-point{
+    padding:16px 18px;border:1px solid rgba(255,255,255,.14);
+    border-radius:12px;background:rgba(255,255,255,.04)
+}
+.solution-point strong{display:block}
+.solution-point span{color:#c9d7e3;font-size:13px}
+
+/* REPRESENTATIVE WORK */
+.project-grid{
+    display:grid;grid-template-columns:1.35fr .65fr;gap:20px;margin-top:38px
+}
+.project-card{position:relative;overflow:hidden;border-radius:18px;min-height:290px}
+.project-card.large{min-height:600px}
+.project-card img{width:100%;height:100%;object-fit:cover}
+.project-overlay{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:25px;color:#fff;
+    background:linear-gradient(transparent,rgba(0,0,0,.78))
+}
+.project-overlay strong{display:block;font-size:20px}
+.project-overlay span{font-size:13px;color:#e6edf3}
+.project-side{display:grid;gap:20px}
+.project-side .project-card{min-height:290px}
+
+/* PROCESS */
+.process-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:18px;margin-top:40px
+}
+.process-item{
+    background:#fff;border:1px solid var(--line);
+    border-radius:16px;padding:26px
+}
+.process-number{
+    color:var(--orange);font-size:13px;font-weight:800;
+    letter-spacing:1px;margin-bottom:10px
+}
+.process-item h3{margin-bottom:8px}
+.process-item p{color:var(--muted);font-size:14px}
+
+/* CAPABILITIES */
+.cap-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:18px;margin-top:38px
+}
+.cap-card{
+    padding:28px;background:#fff;border:1px solid var(--line);
+    border-radius:16px
+}
+.cap-icon{font-size:30px;margin-bottom:15px}
+.cap-card h3{margin-bottom:8px}
+.cap-card p{color:var(--muted);font-size:14px}
+
+/* CONTACT */
+.contact{
+    background:linear-gradient(135deg,var(--navy),#061a2d);
+    color:#fff
+}
+.contact-box{
+    display:grid;grid-template-columns:1fr auto;
+    gap:35px;align-items:center
+}
+.contact .section-label{color:#ff9a5e}
+.contact h2{font-size:clamp(32px,4vw,50px);line-height:1.1;margin-bottom:15px}
+.contact p{color:#c9d7e3;max-width:720px}
+
+/* FOOTER */
+footer{background:#061a2d;color:#fff;padding:45px 0}
+.footer-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:40px
+}
+.footer-title{font-size:20px;font-weight:800}
+.footer-title span{color:var(--orange)}
+.footer-tagline{color:#9fb2c3;font-size:12px;margin-top:4px}
+.footer-info{color:#b9c9d6;font-size:13px;display:grid;gap:5px}
+.footer-bottom{
+    margin-top:35px;padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#8297aa;font-size:12px
 }
 
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;right:25px;bottom:25px;
+    width:58px;height:58px;border-radius:50%;
+    background:#25D366;display:flex;align-items:center;
+    justify-content:center;box-shadow:0 5px 20px rgba(0,0,0,.2);
+    z-index:999
 }
+.whatsapp svg{width:32px;height:32px;fill:#fff}
 
-.navbar {
-  max-width: 1200px;
-  margin: auto;
-  padding: 18px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+/* RESPONSIVE */
+@media(max-width:980px){
+    .nav-links{gap:16px}
+    .hero-grid,.intro-grid,.solution-banner,.contact-box{grid-template-columns:1fr}
+    .hero-visual{order:-1}
+    .hero-visual img{height:360px}
+    .hero-badge{left:18px}
+    .cap-grid{grid-template-columns:1fr 1fr}
+    .process-grid{grid-template-columns:1fr 1fr}
 }
-
-.logo {
-  font-size: 24px;
-  font-weight: 800;
-  color: #08233d;
+@media(max-width:760px){
+    .navbar{min-height:72px}
+    .nav-links{
+        display:none;position:absolute;top:72px;left:0;right:0;
+        background:#fff;border-bottom:1px solid var(--line);
+        padding:18px 4%;flex-direction:column;align-items:stretch;gap:0
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{padding:12px 0}
+    .nav-cta{text-align:center}
+    .menu-btn{display:block}
+    section{padding:68px 0}
+    .hero{padding:62px 0}
+    .hero h1{font-size:48px}
+    .service-grid,.support-grid,.process-grid,.cap-grid{grid-template-columns:1fr}
+    .check-list{grid-template-columns:1fr}
+    .intro-image img{height:340px}
+    .project-grid{grid-template-columns:1fr}
+    .project-card.large{min-height:390px}
+    .project-side{grid-template-columns:1fr 1fr}
+    .project-side .project-card{min-height:220px}
+    .solution-banner{padding:35px 25px}
+    .footer-grid{grid-template-columns:1fr}
 }
-
-.tagline {
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  color: #f28c28;
-  font-weight: 700;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  text-decoration: none;
-  color: #102a43;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: #f28c28;
-}
-
-.hero {
-  background: #08233d;
-  color: #ffffff;
-  padding: 90px 24px;
-}
-
-.hero-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.eyebrow {
-  color: #f28c28;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin-bottom: 18px;
-}
-
-h1 {
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 1.05;
-  margin-bottom: 25px;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #dbe7f0;
-  max-width: 620px;
-}
-
-.buttons {
-  margin-top: 30px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 22px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.btn-primary {
-  background: #f28c28;
-  color: #ffffff;
-}
-
-.btn-secondary {
-  border: 1px solid #ffffff;
-  color: #ffffff;
-}
-
-.hero-images {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 14px;
-}
-
-.hero-main {
-  grid-row: span 2;
-}
-
-.hero-images img {
-  width: 100%;
-  height: 100%;
-  min-height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-section {
-  padding: 80px 24px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.section-title {
-  font-size: 38px;
-  margin-bottom: 15px;
-}
-
-.section-intro {
-  max-width: 750px;
-  color: #52606d;
-  margin-bottom: 40px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.card {
-  padding: 30px;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-.card h3 {
-  margin-bottom: 12px;
-  color: #08233d;
-}
-
-.card p {
-  color: #52606d;
-}
-
-.dark-section {
-  background: #f3f6f8;
-}
-
-.process {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.process-item {
-  padding: 25px;
-  border-left: 4px solid #f28c28;
-  background: #ffffff;
-}
-
-.process-item strong {
-  display: block;
-  margin-bottom: 8px;
-}
-
-footer {
-  background: #08233d;
-  color: #ffffff;
-  padding: 50px 24px;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.whatsapp {
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 5px 20px rgba(0,0,0,.2);
-  z-index: 999;
-}
-
-.whatsapp svg {
-  width: 32px;
-  height: 32px;
-  fill: #ffffff;
-}
-
-@media (max-width: 800px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .process {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    display: none;
-  }
-
-  .hero-images {
-    grid-template-columns: 1fr 1fr;
-  }
+@media(max-width:520px){
+    .project-side{grid-template-columns:1fr}
+    .hero h1{font-size:41px}
+    .hero-text{font-size:16px}
 }
 </style>
 </head>
@@ -325,286 +389,399 @@ footer {
 <body>
 
 <header>
-  <div class="navbar">
-    <div>
-      <div class="logo">JasaListrik.co</div>
-      <div class="tagline">ELECTRICAL SOLUTIONS. BUILT FOR RELIABILITY.</div>
-    </div>
+    <div class="container navbar">
+        <a href="#home" aria-label="JasaListrik.co home">
+            <div class="logo">JasaListrik<span>.co</span></div>
+            <span class="tagline">ELECTRICAL SOLUTIONS. BUILT FOR RELIABILITY.</span>
+        </a>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#process">Process</a>
-      <a href="#quotation">Request Quotation</a>
-      <a href="/">ID</a>
-      <a href="/en/">EN</a>
-    </nav>
-  </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#process">Process</a>
+            <a href="#contact" class="nav-cta">Request Quotation</a>
+            <a href="/">ID</a>
+            <a href="/en/">EN</a>
+        </nav>
+    </div>
 </header>
 
+<main>
+
 <section class="hero" id="home">
-  <div class="hero-inner">
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <div class="eyebrow">ELECTRICAL PANEL & INSTALLATION</div>
+            <h1>ELECTRICAL <span>SOLUTIONS</span> FOR HOME & INDUSTRY.</h1>
+            <p class="hero-text">
+                Electrical panel manufacturing, residential electrical installation,
+                industrial electrical installation, engineering, testing, maintenance,
+                and troubleshooting for reliable electrical systems.
+            </p>
+            <div class="hero-buttons">
+                <a class="btn btn-primary"
+                   href="https://wa.me/6285649690708?text=Hello%20JasaListrik.co%2C%20I%20would%20like%20to%20request%20a%20quotation."
+                   target="_blank" rel="noopener">
+                    Request Quotation
+                </a>
+                <a class="btn btn-outline" href="#services">Explore Services</a>
+            </div>
+        </div>
 
-    <div>
-      <div class="eyebrow">ELECTRICAL PANEL & INSTALLATION</div>
-
-      <h1>ELECTRICAL SOLUTIONS FOR HOME & INDUSTRY.</h1>
-
-      <p>
-        Electrical panel manufacturing, residential electrical installation,
-        industrial installation, engineering, testing, maintenance, and
-        troubleshooting for reliable electrical systems.
-      </p>
-
-      <div class="buttons">
-        <a class="btn btn-primary"
-           href="https://wa.me/6285649690708?text=Hello%20JasaListrik.co%2C%20I%20would%20like%20to%20request%20a%20quotation.">
-          Request Quotation
-        </a>
-
-        <a class="btn btn-secondary" href="#services">
-          Explore Services
-        </a>
-      </div>
+        <div class="hero-visual">
+            <img src="/panel-hero.png" alt="Electrical panel manufacturing and assembly">
+            <div class="hero-badge">
+                <strong>Electrical Engineering</strong>
+                <span>Panel • Installation • Testing • Maintenance</span>
+            </div>
+        </div>
     </div>
-
-    <div class="hero-images">
-      <div class="hero-main">
-        <img src="/panel-hero.png" alt="Electrical panel manufacturing">
-      </div>
-
-      <div>
-        <img src="/residential-installation.png"
-             alt="Residential electrical installation">
-      </div>
-
-      <div>
-        <img src="/industrial-installation.png"
-             alt="Industrial electrical installation">
-      </div>
-    </div>
-
-  </div>
 </section>
 
 <section id="about">
-  <div class="container">
-    <h2 class="section-title">Electrical Solutions for Different Applications</h2>
+    <div class="container intro-grid">
+        <div class="intro-copy">
+            <div class="section-label">ABOUT JASALISTRIK.CO</div>
+            <h2>From electrical panels to complete installation.</h2>
+            <p>
+                JasaListrik.co provides electrical solutions for residential,
+                commercial, workshop, warehouse, and industrial applications.
+                Our services cover electrical panel manufacturing, installation,
+                engineering, testing, commissioning, maintenance, and troubleshooting.
+            </p>
 
-    <p class="section-intro">
-      JasaListrik.co provides electrical solutions for residential,
-      commercial, workshop, warehouse, contractor, and industrial applications.
-      Our services cover electrical panels, installation, engineering,
-      testing, maintenance, and troubleshooting.
-    </p>
-  </div>
+            <div class="check-list">
+                <div class="check-item"><span class="check-icon">✓</span><span>Panel Manufacturing</span></div>
+                <div class="check-item"><span class="check-icon">✓</span><span>Residential Installation</span></div>
+                <div class="check-item"><span class="check-icon">✓</span><span>Industrial Installation</span></div>
+                <div class="check-item"><span class="check-icon">✓</span><span>Testing & Commissioning</span></div>
+                <div class="check-item"><span class="check-icon">✓</span><span>Maintenance</span></div>
+                <div class="check-item"><span class="check-icon">✓</span><span>Troubleshooting</span></div>
+            </div>
+        </div>
+
+        <div class="intro-image">
+            <img src="/panel-testing-maintenance.png" alt="Electrical panel testing and maintenance" loading="lazy">
+            <div class="image-note">
+                <strong>Electrical Engineering</strong>
+                <span>Panel • Installation • Testing • Maintenance</span>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="dark-section" id="services">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
-
-    <p class="section-intro">
-      Electrical services designed to support reliable installation,
-      operation, maintenance, and improvement of electrical systems.
-    </p>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Electrical Panel Manufacturing</h3>
-        <p>
-          Electrical panel assembly and manufacturing for industrial,
-          commercial, workshop, and building applications.
+    <div class="container">
+        <div class="section-label">OUR SERVICES</div>
+        <h2 class="section-title">Electrical services built around your application.</h2>
+        <p class="section-text">
+            From residential electrical work to industrial electrical systems,
+            our services can be adapted to project scope, technical requirements,
+            site conditions, and customer needs.
         </p>
-      </div>
 
-      <div class="card">
-        <h3>Residential Electrical Installation</h3>
-        <p>
-          Electrical installation for houses, buildings, renovations,
-          electrical distribution, lighting, and supporting systems.
-        </p>
-      </div>
+        <div class="service-grid">
 
-      <div class="card">
-        <h3>Industrial Electrical Installation</h3>
-        <p>
-          Electrical installation for factories, warehouses, workshops,
-          production areas, and industrial facilities.
-        </p>
-      </div>
+            <article class="service-card">
+                <div class="service-number">01 / PANEL</div>
+                <h3>Panel Manufacturing</h3>
+                <p>
+                    Electrical panel assembly and wiring for residential,
+                    commercial, workshop, and industrial applications.
+                </p>
+                <ul class="service-list">
+                    <li>Distribution Panel</li>
+                    <li>Control Panel</li>
+                    <li>Starter Panel</li>
+                    <li>Panel Modification & Retrofit</li>
+                </ul>
+            </article>
 
-      <div class="card">
-        <h3>Engineering</h3>
-        <p>
-          Electrical system planning, technical assessment, installation
-          support, and engineering coordination.
-        </p>
-      </div>
+            <article class="service-card">
+                <div class="service-number">02 / RESIDENTIAL</div>
+                <h3>Residential Installation</h3>
+                <p>
+                    Electrical installation and improvement for homes,
+                    renovations, and residential buildings.
+                </p>
+                <ul class="service-list">
+                    <li>Lighting & Socket Installation</li>
+                    <li>MCB / Distribution Board</li>
+                    <li>New Electrical Points</li>
+                    <li>Grounding & Troubleshooting</li>
+                </ul>
+            </article>
 
-      <div class="card">
-        <h3>Testing & Commissioning</h3>
-        <p>
-          Electrical testing, inspection, verification, and commissioning
-          support before system operation.
-        </p>
-      </div>
+            <article class="service-card">
+                <div class="service-number">03 / INDUSTRIAL</div>
+                <h3>Industrial Installation</h3>
+                <p>
+                    Electrical installation for factories, production areas,
+                    warehouses, workshops, and industrial facilities.
+                </p>
+                <ul class="service-list">
+                    <li>Power Distribution</li>
+                    <li>Cable Tray & Cable Ladder</li>
+                    <li>Cable Pulling & Termination</li>
+                    <li>Machine Electrical Connection</li>
+                </ul>
+            </article>
 
-      <div class="card">
-        <h3>Maintenance & Troubleshooting</h3>
-        <p>
-          Electrical maintenance, inspection, troubleshooting, and corrective
-          support for electrical systems.
-        </p>
-      </div>
+            <article class="service-card">
+                <div class="service-number">04 / TESTING & MAINTENANCE</div>
+                <h3>Testing & Maintenance</h3>
+                <p>
+                    Inspection, measurement, testing, maintenance, and technical
+                    improvement for electrical systems.
+                </p>
+                <ul class="service-list">
+                    <li>Electrical Inspection</li>
+                    <li>Panel Testing</li>
+                    <li>Preventive Maintenance</li>
+                    <li>Corrective Maintenance</li>
+                </ul>
+            </article>
 
+        </div>
+
+        <div class="support-grid">
+            <article class="support-card">
+                <div class="support-icon">⚙</div>
+                <h3>Engineering</h3>
+                <p>Technical planning, system review, drawing coordination, and electrical project support.</p>
+            </article>
+            <article class="support-card">
+                <div class="support-icon">✓</div>
+                <h3>Commissioning</h3>
+                <p>Verification and testing of electrical systems before handover and operation.</p>
+            </article>
+            <article class="support-card">
+                <div class="support-icon">+</div>
+                <h3>Troubleshooting</h3>
+                <p>Electrical fault finding, repair, adjustment, and improvement for existing systems.</p>
+            </article>
+        </div>
     </div>
-  </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="solution-banner">
+            <div>
+                <div class="section-label">ELECTRICAL SOLUTIONS</div>
+                <h2>One electrical partner for home and industry.</h2>
+                <p>
+                    From residential lighting installation to industrial electrical
+                    infrastructure, we provide practical solutions based on application,
+                    technical requirements, and site conditions.
+                </p>
+            </div>
+            <div class="solution-points">
+                <div class="solution-point">
+                    <strong>Residential</strong>
+                    <span>Electrical installation, distribution, lighting, and supporting systems.</span>
+                </div>
+                <div class="solution-point">
+                    <strong>Industrial</strong>
+                    <span>Panels, power distribution, cabling, machine connections, and maintenance.</span>
+                </div>
+                <div class="solution-point">
+                    <strong>Technical Support</strong>
+                    <span>Engineering, testing, commissioning, troubleshooting, and improvement.</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="projects">
-  <div class="container">
-    <h2 class="section-title">Applications</h2>
+    <div class="container">
+        <div class="section-label">ELECTRICAL SOLUTIONS</div>
+        <h2 class="section-title">Representative electrical work.</h2>
+        <p class="section-text">
+            Examples of panel assembly, electrical installation, cable management,
+            testing, and maintenance applications.
+        </p>
 
-    <p class="section-intro">
-      Our electrical solutions can support different environments and
-      applications.
-    </p>
+        <div class="project-grid">
+            <article class="project-card large">
+                <img src="/project-installation-collage.png" alt="Electrical installation and panel work" loading="lazy">
+                <div class="project-overlay">
+                    <strong>Control Panel Installation</strong>
+                    <span>Panel supply • Installation • Cable management</span>
+                </div>
+            </article>
 
-    <div class="cards">
+            <div class="project-side">
+                <article class="project-card">
+                    <img src="/panel-assembly.png" alt="Electrical panel assembly" loading="lazy">
+                    <div class="project-overlay">
+                        <strong>Panel Manufacturing</strong>
+                        <span>Assembly • Wiring • Component installation</span>
+                    </div>
+                </article>
 
-      <div class="card">
-        <h3>Factories</h3>
-        <p>Electrical systems for production and industrial facilities.</p>
-      </div>
-
-      <div class="card">
-        <h3>Warehouses</h3>
-        <p>Electrical distribution, lighting, and supporting systems.</p>
-      </div>
-
-      <div class="card">
-        <h3>Homes & Buildings</h3>
-        <p>Residential and building electrical installation solutions.</p>
-      </div>
-
+                <article class="project-card">
+                    <img src="/panel-testing-maintenance.png" alt="Electrical panel testing and maintenance" loading="lazy">
+                    <div class="project-overlay">
+                        <strong>Testing & Maintenance</strong>
+                        <span>Inspection • Measurement • Maintenance</span>
+                    </div>
+                </article>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-<section class="dark-section" id="capabilities">
-  <div class="container">
-    <h2 class="section-title">Service Coverage</h2>
+<section class="dark-section" id="process">
+    <div class="container">
+        <div class="section-label">OUR PROCESS</div>
+        <h2 class="section-title">From requirement to reliable operation.</h2>
+        <p class="section-text">
+            A structured workflow helps keep technical requirements, installation quality,
+            testing, and handover aligned.
+        </p>
 
-    <p class="section-intro">
-      JasaListrik.co provides services across multiple regions in Indonesia,
-      subject to project scope and requirements.
-    </p>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Java</h3>
-        <p>Electrical services for residential, commercial, and industrial applications.</p>
-      </div>
-
-      <div class="card">
-        <h3>Bali & Lombok</h3>
-        <p>Electrical installation and supporting services for various applications.</p>
-      </div>
-
-      <div class="card">
-        <h3>Kalimantan & Sumatra</h3>
-        <p>Electrical panel and installation services based on project requirements.</p>
-      </div>
-
+        <div class="process-grid">
+            <div class="process-item">
+                <div class="process-number">01</div>
+                <h3>Survey</h3>
+                <p>Understand the site conditions and project requirements.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-number">02</div>
+                <h3>Engineering</h3>
+                <p>Plan the appropriate technical solution for the application.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-number">03</div>
+                <h3>Manufacturing</h3>
+                <p>Build and prepare the electrical panel according to requirements.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-number">04</div>
+                <h3>Installation</h3>
+                <p>Install equipment, panels, cable management, and cabling.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-number">05</div>
+                <h3>Testing</h3>
+                <p>Verify electrical system performance and installation quality.</p>
+            </div>
+            <div class="process-item">
+                <div class="process-number">06</div>
+                <h3>Handover</h3>
+                <p>Complete the work and support the system during operation.</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-<section id="process">
-  <div class="container">
-    <h2 class="section-title">Our Process</h2>
+<section id="capabilities">
+    <div class="container">
+        <div class="section-label">APPLICATIONS</div>
+        <h2 class="section-title">Built for different electrical environments.</h2>
+        <p class="section-text">
+            Our services can be adapted to residential, commercial, workshop,
+            warehouse, and industrial requirements.
+        </p>
 
-    <p class="section-intro">
-      A structured approach from initial discussion to project completion.
-    </p>
-
-    <div class="process">
-
-      <div class="process-item">
-        <strong>01 — Consultation</strong>
-        Understand the project scope and electrical requirements.
-      </div>
-
-      <div class="process-item">
-        <strong>02 — Engineering</strong>
-        Review technical requirements and develop the appropriate solution.
-      </div>
-
-      <div class="process-item">
-        <strong>03 — Execution</strong>
-        Panel manufacturing, installation, testing, or maintenance.
-      </div>
-
-      <div class="process-item">
-        <strong>04 — Verification</strong>
-        Testing, inspection, troubleshooting, and final verification.
-      </div>
-
+        <div class="cap-grid">
+            <article class="cap-card">
+                <div class="cap-icon">🏠</div>
+                <h3>Residential</h3>
+                <p>Homes, renovations, lighting, sockets, distribution, and electrical improvements.</p>
+            </article>
+            <article class="cap-card">
+                <div class="cap-icon">🏭</div>
+                <h3>Industrial</h3>
+                <p>Factories, production areas, power distribution, machinery, and industrial infrastructure.</p>
+            </article>
+            <article class="cap-card">
+                <div class="cap-icon">🏢</div>
+                <h3>Commercial</h3>
+                <p>Offices, warehouses, workshops, retail spaces, and commercial facilities.</p>
+            </article>
+            <article class="cap-card">
+                <div class="cap-icon">⚡</div>
+                <h3>Electrical Systems</h3>
+                <p>Panels, wiring, cable management, testing, maintenance, and troubleshooting.</p>
+            </article>
+        </div>
     </div>
-  </div>
 </section>
 
-<section id="quotation">
-  <div class="container">
-    <h2 class="section-title">Request a Quotation</h2>
-
-    <p class="section-intro">
-      Tell us about your electrical project, installation requirements,
-      panel requirements, or maintenance needs.
-    </p>
-
-    <a class="btn btn-primary"
-       href="https://wa.me/6285649690708?text=Hello%20JasaListrik.co%2C%20I%20would%20like%20to%20discuss%20an%20electrical%20project.">
-      Contact via WhatsApp
-    </a>
-  </div>
+<section class="contact" id="contact">
+    <div class="container contact-box">
+        <div>
+            <div class="section-label">LET'S WORK TOGETHER</div>
+            <h2>Have an electrical project in mind?</h2>
+            <p>
+                Tell us about your electrical requirements, project scope, location,
+                or existing system. We can discuss a suitable solution for your application.
+            </p>
+        </div>
+        <a class="btn btn-primary"
+           href="https://wa.me/6285649690708?text=Hello%20JasaListrik.co%2C%20I%20would%20like%20to%20discuss%20my%20electrical%20requirements."
+           target="_blank" rel="noopener">
+            Contact via WhatsApp
+        </a>
+    </div>
 </section>
+
+</main>
 
 <footer>
-  <div class="footer-inner">
-
-    <div>
-      <strong>JasaListrik.co</strong>
-      <p>Electrical Solutions. Built for Reliability.</p>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-title">JasaListrik<span>.co</span></div>
+                <div class="footer-tagline">ELECTRICAL SOLUTIONS. BUILT FOR RELIABILITY.</div>
+            </div>
+            <div class="footer-info">
+                <div>Sidoarjo, East Java, Indonesia</div>
+                <div>Serving Java, Bali, Kalimantan, Lombok & Sumatra</div>
+                <div>WhatsApp: +62 856-4969-0708</div>
+                <div>Email: muhammadsauqi97@gmail.com</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 JasaListrik.co. Electrical services and solutions.
+        </div>
     </div>
-
-    <div>
-      <p>Sidoarjo, East Java, Indonesia</p>
-      <p>Serving Java, Bali, Kalimantan, Lombok & Sumatra</p>
-      <p>WhatsApp: +62 856-4969-0708</p>
-      <p>Email: muhammadsauqi97@gmail.com</p>
-    </div>
-
-  </div>
 </footer>
 
 <a class="whatsapp"
    href="https://wa.me/6285649690708?text=Hello%20JasaListrik.co"
-   target="_blank"
+   target="_blank" rel="noopener"
    aria-label="Contact JasaListrik.co on WhatsApp">
-
-  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19.11 17.37c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01s-.48.07-.73.34c-.25.27-.95.93-.95 2.26s.98 2.62 1.11 2.8c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-    <path d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.54 1.74 6.5L3 29l6.67-1.7A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.6c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.96 1.01 1.06-3.86-.27-.4A10.57 10.57 0 1 1 16 26.6z"/>
-  </svg>
-
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M19.11 17.37c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01s-.48.07-.73.34c-.25.27-.95.93-.95 2.26s.98 2.62 1.11 2.8c.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+        <path d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.54 1.74 6.5L3 29l6.67-1.7A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.6c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.96 1.01 1.06-3.86-.27-.4A10.57 10.57 0 1 1 16 26.6z"/>
+    </svg>
 </a>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+    });
+});
+</script>
 
 </body>
 </html>
